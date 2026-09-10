@@ -2,27 +2,31 @@
 <html lang="en">
 <head>
     <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="viewport" content="width=, initial-scale=1.0">
     <title>Document</title>
 </head>
 <body>
-    <h1>esteban gey</h1>
-    <input type="text" id="tarea" placeholder="ingresar su tarea"></input>
+    <h1>Ejercicios</h1>
+    tarea: 
+    <input type="text" id="tarea" placeholder="Ingresar su tarea">
     <fieldset>
-        <legend>seleccione una opcion:</legend>
-        <input type="radio" name="rebajo" value="1">completa</input>
-        <input type="radio" name="rebajo" value="2">incompleto</input>
-        <fieldset>
+    <legend> seleccione una opcion:</legend>
+        <input type="radio" name="trabajo" value="1">Completada
+         <input type="radio" name="trabajo" value="2">Incompleta
+    </fieldset> 
     <select name="tarea" id="tareaSelect">
-         <option value="">seleccione una tarea</option>
-         <option value="completado">completada</option>
-         <option value="imcompleto">imcompletado</option>
+        <option value="">Seleccione una tarea</option>
+        <option value="Completado" >Completada</option>
+        <option value="Incompleto">Incompleta</option>
     </select>
     <br>
-    <button  onclick="agregarTarea()">adicionar tarea</button>
-    <button  onclick="mostrartareas()">mostrar tareas</button>
-    <p>este es un parrafo de ejemplo.</p>
-    <p> id="respuest"</p>
+    <button onclick="agregarTarea()">Adicionar tarea</button>
+    <button onclick="mostrarTarea()">Mostrar tarea</button>
+    <button onclick="eliminarTarea()">Eliminar tarea</button>
+    
+    <p>Este es un parrafo de ejemplo.</p>
+    <p id="respuesta"></p>
+
     <script src="./js/ejemplo1.js"></script>
 </body>
 </html>
