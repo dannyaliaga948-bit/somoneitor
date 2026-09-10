@@ -1,5 +1,5 @@
 let tareas = [];
-function agregarTarea(tarea="",estado="Incompleto") {
+function agregarTareas(tarea="",estado="Incompleto") {
     if(tarea === ""){
     tarea = document.getElementById("tarea").value;
     estado= document.getElementById("tareaSelect").value;
@@ -7,24 +7,30 @@ function agregarTarea(tarea="",estado="Incompleto") {
     tareas.push({ descripcion: tarea, completada:estado});
     
 }
-function eliminarTarea(indice) {
+function eliminarTareas(indice) {
     if (indice >= 0 && indice < tareas.length) {
         tareas.splice(indice, 1);
     }else{
         console.log("Indice invalido");
     }
 }
-function mostrarTarea(){
+function mostrarTareas(){
     console.log("Mostrando Lista de tareas:");
-    tareas.forEach((tarea,indice) =>{
-        console.log(`${indice + 1}.
-             [${tarea.completada }]
-             ${tarea.descripcion}`);
+const contenedor = document.getElementById("respuestas");
+let respuestasHtml = "";
+tareas.forEach((tarea, index) => {
+    console.log(`Tarea ${index + 1},[${tarea.completada}]: ${tarea.descripcion}`);
+    respuestaHtml = '<ul>';
+    respuestaHtml += `<li>Tarea ${index + 1},[${tarea.completada}]: ${tarea.descripcion}</li>`;
+    respuestaHtml += '</ul>';
+    respuestasHtml += respuestaHtml;
+
     });
+ document.getElementById("respuesta").innerHTML = respuestasHtml;
 }
 //Adicionar las tareas
-agregarTarea("Comprar leche","Completado");
-agregarTarea("Hacer ejercicio","Completado");
-agregarTarea("Estudiar JavaScript","Incompleto");
-agregarTarea("Subir a GitHub","Incompleto");
-mostrarTarea();
+agregarTareas("Comprar leche","Completado");
+agregarTareas("Hacer ejercicio","Completado");
+agregarTareas("Estudiar JavaScript","Incompleto");
+agregarTareas("Subir a GitHub","Incompleto");
+mostrarTareas();
